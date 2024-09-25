@@ -1,0 +1,17 @@
+<form [formGroup]="parkingForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="name">Full Name:</label>
+    <input type="text" id="name" formControlName="name">
+  </div>
+
+  <div>
+    <label for="options">Spots: </label>
+    <select formControlName="selectedOption">
+      <option *ngFor="let option of options" [value]="option">{{ option }}</option>
+    </select>
+  </div>
+
+</form>
+
+
+<p>Selected: {{ parkingForm.get('selectedOption')?.value }} </p>
