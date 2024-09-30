@@ -1,0 +1,12 @@
+<div class="grid-container">
+    <div 
+        *ngFor="let spot of (parkingSpots$ | async)" 
+        
+        [ngClass]="{'booked': spot.isBooked, 'available': !spot.isBooked}"
+        class="grid-item"
+    >
+        Spot {{ spot.id }}
+    </div>
+</div>
+
+<!-- [ngClass] applies the appropriate class based on which is true (isBooked/!isBooked)-->
