@@ -38,9 +38,5 @@ export class ParkingFormComponent implements OnInit {
       this.parkingSpotService.bookSpot(selectedSpot.id, name);
       this.parkingForm.reset();
     }
-
-    if(selectedSpot?.isBooked){
-      alert("that spot is already booked");
-    }
   }
 }
